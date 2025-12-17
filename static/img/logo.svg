@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#2563eb"/>
+
+  <!-- Barn roof -->
+  <path d="M50 12 L85 40 L15 40 Z" fill="#fbbf24"/>
+
+  <!-- Barn body -->
+  <rect x="20" y="40" width="60" height="45" fill="#dc2626"/>
+
+  <!-- Barn door (open, welcoming) -->
+  <rect x="38" y="55" width="24" height="30" fill="#1e3a5f"/>
+
+  <!-- Door opening/light -->
+  <rect x="42" y="59" width="16" height="26" fill="#fef3c7"/>
+
+  <!-- Roof peak detail -->
+  <path d="M50 12 L50 25" stroke="#b45309" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Two people silhouettes helping/raising -->
+  <g fill="#1e40af">
+    <!-- Left person -->
+    <circle cx="28" cy="70" r="5"/>
+    <path d="M28 75 L28 88 M22 80 L34 78" stroke="#1e40af" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Right person -->
+    <circle cx="72" cy="70" r="5"/>
+    <path d="M72 75 L72 88 M66 78 L78 80" stroke="#1e40af" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Hands reaching up (raising gesture) -->
+  <path d="M24 78 L35 65" stroke="#1e40af" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M76 78 L65 65" stroke="#1e40af" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

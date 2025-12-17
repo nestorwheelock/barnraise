@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#c2410c"/>
+    </linearGradient>
+    <linearGradient id="roof" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fcd34d"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="url(#bg)"/>
+
+  <!-- Barn -->
+  <rect x="6" y="13" width="20" height="15" fill="#dc2626"/>
+
+  <!-- Roof -->
+  <path d="M16 4 L28 13 L4 13 Z" fill="url(#roof)"/>
+
+  <!-- Door with glow -->
+  <rect x="12" y="18" width="8" height="10" fill="#fef3c7"/>
+
+  <!-- Simple people silhouettes -->
+  <circle cx="7" cy="24" r="2" fill="#fef3c7"/>
+  <circle cx="25" cy="24" r="2" fill="#fef3c7"/>
+
+  <!-- Raised hands -->
+  <line x1="7" y1="22" x2="10" y2="18" stroke="#fef3c7" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="25" y1="22" x2="22" y2="18" stroke="#fef3c7" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
