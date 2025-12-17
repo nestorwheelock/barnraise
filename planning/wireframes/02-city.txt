@@ -1,0 +1,72 @@
+╔══════════════════════════════════════╗
+║         CITY PAGE - MOBILE           ║
+╚══════════════════════════════════════╝
+
+┌──────────────────────────────────────┐
+│  ← Back                              │
+│                                      │
+│  St. Louis City, Missouri            │
+│  ═══════════════════════════         │
+│                                      │
+├──────────────────────────────────────┤
+│                                      │
+│  ┌──────┐ ┌──────┐ ┌──────────┐     │
+│  │ Now  │ │Today │ │This Week │     │
+│  │ ○○○  │ │ ●●●  │ │   ○○○    │     │
+│  └──────┘ └──────┘ └──────────┘     │
+│   (selected state shown with fill)   │
+│                                      │
+├──────────────────────────────────────┤
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │  Soulard                    (4)│  │
+│  │  4 activities nearby           │  │
+│  └────────────────────────────────┘  │
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │  Tower Grove South          (3)│  │
+│  │  3 activities nearby           │  │
+│  └────────────────────────────────┘  │
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │  The Hill                   (2)│  │
+│  │  2 activities nearby           │  │
+│  └────────────────────────────────┘  │
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │  Central West End           (2)│  │
+│  │  2 activities nearby           │  │
+│  └────────────────────────────────┘  │
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │  Lafayette Square           (1)│  │
+│  │  1 activity nearby             │  │
+│  └────────────────────────────────┘  │
+│                                      │
+├──────────────────────────────────────┤
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │      POST AN ACTIVITY          │  │
+│  └────────────────────────────────┘  │
+│                                      │
+└──────────────────────────────────────┘
+
+EMPTY STATE (when no activities):
+┌──────────────────────────────────────┐
+│                                      │
+│     No activities today.             │
+│     Be the first to post one!        │
+│                                      │
+└──────────────────────────────────────┘
+
+INTERACTIONS:
+- Tap filter pill → Reload with new time filter
+- Tap neighborhood card → Navigate to neighborhood
+- Back arrow → Return to home
+- Filter state persists in URL (?filter=today)
+
+NOTES:
+- Only neighborhoods WITH activities shown
+- Count reflects filtered time period
+- Neighborhoods sorted by activity count
+- Filter pills use toggle/pill UI pattern

@@ -1,0 +1,62 @@
+╔══════════════════════════════════════╗
+║       POST SUCCESS - MOBILE          ║
+╚══════════════════════════════════════╝
+
+┌──────────────────────────────────────┐
+│                                      │
+│                                      │
+│               ✓                      │
+│            (large)                   │
+│                                      │
+│       Activity Posted!               │
+│                                      │
+│   Your activity is now visible to    │
+│   neighbors in Soulard.              │
+│                                      │
+├──────────────────────────────────────┤
+│                                      │
+│  Save this link to edit or           │
+│  manage your activity:               │
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │                                │  │
+│  │  barnraise.app/manage/         │  │
+│  │  abc123xyz789...               │  │
+│  │                                │  │
+│  │  ┌──────────────────────────┐  │  │
+│  │  │       COPY LINK          │  │  │
+│  │  └──────────────────────────┘  │  │
+│  │                                │  │
+│  └────────────────────────────────┘  │
+│                                      │
+│  (We also sent it to your email)     │
+│                                      │
+├──────────────────────────────────────┤
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │     VIEW YOUR ACTIVITY         │  │
+│  │     [Primary Button]           │  │
+│  └────────────────────────────────┘  │
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │       BACK TO HOME             │  │
+│  │     [Secondary Button]         │  │
+│  └────────────────────────────────┘  │
+│                                      │
+└──────────────────────────────────────┘
+
+INTERACTIONS:
+- "Copy Link" → Copies URL to clipboard, shows toast
+- "View Your Activity" → Navigate to activity detail
+- "Back to Home" → Navigate to home page
+
+COPY BEHAVIOR:
+navigator.clipboard.writeText(url)
+- Button text changes briefly: "Copied!"
+- Or show toast notification
+
+NOTES:
+- Secret token URL is only way to manage
+- Emphasize saving the link
+- Email confirmation mentioned but not required
+- Green checkmark for success state

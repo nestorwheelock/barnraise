@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Barn Raise{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        barn: {
+                            50: '#fdf8f6',
+                            100: '#f9ebe5',
+                            200: '#f5d5c8',
+                            300: '#eab69e',
+                            400: '#dd8d6c',
+                            500: '#d06b46',
+                            600: '#c25535',
+                            700: '#a1432a',
+                            800: '#843928',
+                            900: '#6c3224',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .form-input, .form-textarea, .form-select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+        }
+        .form-input:focus, .form-textarea:focus, .form-select:focus {
+            outline: none;
+            border-color: #d06b46;
+            box-shadow: 0 0 0 3px rgba(208, 107, 70, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-barn-50 min-h-screen">
+    <div class="max-w-lg mx-auto px-4 py-6">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

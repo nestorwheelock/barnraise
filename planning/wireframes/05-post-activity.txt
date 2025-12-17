@@ -1,0 +1,90 @@
+╔══════════════════════════════════════╗
+║      POST ACTIVITY - MOBILE          ║
+╚══════════════════════════════════════╝
+
+┌──────────────────────────────────────┐
+│  ← Back                              │
+│                                      │
+│  Post an Activity                    │
+│  ════════════════                    │
+│                                      │
+├──────────────────────────────────────┤
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │  What are you doing?           │  │
+│  │  ┌──────────────────────────┐  │  │
+│  │  │ Moving furniture          │  │  │
+│  │  └──────────────────────────┘  │  │
+│  │                                │  │
+│  │  Tell people more              │  │
+│  │  ┌──────────────────────────┐  │  │
+│  │  │ Helping my neighbor move │  │  │
+│  │  │ a couch and some boxes   │  │  │
+│  │  │ to a new apartment       │  │  │
+│  │  │ nearby. Easy work, just  │  │  │
+│  │  │ need some extra hands.   │  │  │
+│  │  └──────────────────────────┘  │  │
+│  │                                │  │
+│  │  Neighborhood                  │  │
+│  │  ┌──────────────────────────┐  │  │
+│  │  │ Soulard               ▼  │  │  │
+│  │  └──────────────────────────┘  │  │
+│  │                                │  │
+│  │  Nearby landmark               │  │
+│  │  ┌──────────────────────────┐  │  │
+│  │  │ Near 9th & Geyer          │  │  │
+│  │  └──────────────────────────┘  │  │
+│  │                                │  │
+│  │  ┌────────────┐ ┌────────────┐ │  │
+│  │  │ When?      │ │ How long?  │ │  │
+│  │  │ [datetime] │ │ 1-2 hours▼ │ │  │
+│  │  └────────────┘ └────────────┘ │  │
+│  │                                │  │
+│  │  How many helpers?             │  │
+│  │  ┌──────────────────────────┐  │  │
+│  │  │ 2                     ▼  │  │  │
+│  │  └──────────────────────────┘  │  │
+│  │                                │  │
+│  │  Your email (for updates)      │  │
+│  │  ┌──────────────────────────┐  │  │
+│  │  │ you@email.com             │  │  │
+│  │  └──────────────────────────┘  │  │
+│  │  (We'll send you a link to     │  │
+│  │   manage your activity)        │  │
+│  │                                │  │
+│  │  Your phone (optional)         │  │
+│  │  ┌──────────────────────────┐  │  │
+│  │  │                           │  │  │
+│  │  └──────────────────────────┘  │  │
+│  │                                │  │
+│  └────────────────────────────────┘  │
+│                                      │
+├──────────────────────────────────────┤
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │       POST ACTIVITY            │  │
+│  └────────────────────────────────┘  │
+│                                      │
+└──────────────────────────────────────┘
+
+FORM FIELDS:
+- Title: text input, required
+- Description: textarea, required
+- Neighborhood: select dropdown, required
+- Location hint: text input, required
+- When: datetime-local input, required
+- Duration: select (30m, 1h, 1.5h, 2h, 3h, 4h)
+- Helpers needed: number input (1-20)
+- Email: email input, required
+- Phone: tel input, optional
+
+VALIDATION:
+- Client-side: HTML5 required attributes
+- Server-side: Django form validation
+- Errors shown inline below fields
+
+NOTES:
+- Neighborhood dropdown grouped by city
+- DateTime picker native on mobile
+- Email not shown publicly
+- Phone optional for coordination

@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Barn Raise - Help, Connect, Meet Your Neighbors{% endblock %}
+
+{% block content %}
+<div class="text-center mb-8">
+    <h1 class="text-3xl font-bold text-barn-800 mb-2">Barn Raise</h1>
+    <p class="text-barn-600">A simple way to help, connect, and get to know your neighbors.</p>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm p-6 mb-6">
+    <h2 class="text-lg font-semibold text-gray-800 mb-1">Where do you want to look</h2>
+    <p class="text-gray-600 mb-4">for stuff to do?</p>
+
+    <div class="relative">
+        <input type="text"
+               name="q"
+               placeholder="Search neighborhoods..."
+               autocomplete="off"
+               class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-barn-500 focus:border-barn-500 text-lg"
+               hx-get="{% url 'search_locations' %}"
+               hx-trigger="keyup changed delay:300ms"
+               hx-target="#search-results"
+               hx-indicator="#search-spinner">
+        <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+        <svg id="search-spinner" class="htmx-indicator absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-barn-600 animate-spin" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+    </div>
+
+    <div id="search-results" class="mt-4">
+        <div class="text-center py-4 text-gray-400">
+            <p class="text-sm">Start typing to search for cities or neighborhoods</p>
+        </div>
+    </div>
+</div>
+
+<div class="relative my-6">
+    <div class="absolute inset-0 flex items-center">
+        <div class="w-full border-t border-gray-300"></div>
+    </div>
+    <div class="relative flex justify-center text-sm">
+        <span class="px-2 bg-barn-50 text-gray-500">or browse all cities</span>
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm p-4 mb-6">
+    {% if cities %}
+    <div class="grid grid-cols-2 gap-2">
+        {% for city in cities %}
+        <a href="{{ city.get_absolute_url }}"
+           class="p-3 bg-barn-50 hover:bg-barn-100 rounded-lg transition-colors text-center">
+            <span class="text-sm font-medium text-gray-800">{{ city.name }}</span>
+            {% if city.activity_count %}
+            <span class="ml-1 text-xs text-barn-600">({{ city.activity_count }})</span>
+            {% endif %}
+        </a>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-gray-500 text-center py-4">No cities available yet. Check back soon!</p>
+    {% endif %}
+</div>
+
+<a href="{% url 'activity_post' %}"
+   class="block w-full py-4 bg-barn-600 hover:bg-barn-700 text-white text-center font-semibold rounded-xl transition-colors">
+    Post an Activity
+</a>
+
+<div class="mt-8 text-center text-sm text-gray-500">
+    <p>Not networking. Not a long-term commitment.</p>
+    <p>Just people helping people, close to home.</p>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Activity Posted! - Barn Raise{% endblock %}
+
+{% block content %}
+<div class="text-center mb-8">
+    <div class="text-6xl mb-4">✓</div>
+    <h1 class="text-2xl font-bold text-gray-800 mb-2">Activity Posted!</h1>
+    <p class="text-gray-600">Your activity is now visible to neighbors in {{ activity.neighborhood.name }}.</p>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm p-6 mb-6">
+    <h2 class="font-semibold text-gray-800 mb-4">Save this link to manage your activity:</h2>
+
+    <div class="bg-barn-50 rounded-lg p-4 mb-4">
+        <p class="text-sm text-gray-600 break-all font-mono">
+            {{ request.scheme }}://{{ request.get_host }}{{ activity.get_manage_url }}
+        </p>
+    </div>
+
+    <button onclick="navigator.clipboard.writeText('{{ request.scheme }}://{{ request.get_host }}{{ activity.get_manage_url }}')"
+            class="w-full py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg transition-colors text-sm">
+        Copy Link
+    </button>
+
+    <p class="text-xs text-gray-400 text-center mt-4">(We also sent it to your email)</p>
+</div>
+
+<div class="space-y-3">
+    <a href="{{ activity.get_absolute_url }}"
+       class="block w-full py-4 bg-barn-600 hover:bg-barn-700 text-white text-center font-semibold rounded-xl transition-colors">
+        View Your Activity
+    </a>
+
+    <a href="{% url 'home' %}"
+       class="block w-full py-4 bg-white hover:bg-gray-50 text-gray-600 text-center font-semibold rounded-xl border transition-colors">
+        Back to Home
+    </a>
+</div>
+{% endblock %}

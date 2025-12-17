@@ -1,0 +1,65 @@
+╔══════════════════════════════════════╗
+║         HOME PAGE - MOBILE           ║
+╚══════════════════════════════════════╝
+
+┌──────────────────────────────────────┐
+│                                      │
+│           BARN RAISE                 │
+│                                      │
+│    A simple way to help, connect,    │
+│    and get to know your neighbors.   │
+│                                      │
+├──────────────────────────────────────┤
+│                                      │
+│  Where are you?                      │
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │  St. Louis City, MO        (12)│  │
+│  │  12 activities nearby          │  │
+│  └────────────────────────────────┘  │
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │  St. Louis County, MO       (8)│  │
+│  │  8 activities nearby           │  │
+│  └────────────────────────────────┘  │
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │  East St. Louis, IL         (3)│  │
+│  │  3 activities nearby           │  │
+│  └────────────────────────────────┘  │
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │  Belleville, IL             (2)│  │
+│  │  2 activities nearby           │  │
+│  └────────────────────────────────┘  │
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │  Edwardsville, IL           (1)│  │
+│  │  1 activity nearby             │  │
+│  └────────────────────────────────┘  │
+│                                      │
+├──────────────────────────────────────┤
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │      POST AN ACTIVITY          │  │
+│  │      [Primary Button]          │  │
+│  └────────────────────────────────┘  │
+│                                      │
+├──────────────────────────────────────┤
+│                                      │
+│  Not networking. Not a long-term     │
+│  commitment. Just people helping     │
+│  people, close to home.              │
+│                                      │
+└──────────────────────────────────────┘
+
+INTERACTIONS:
+- Tap city card → Navigate to city page
+- Tap "Post an Activity" → Navigate to post form
+- Activity count updates dynamically
+
+NOTES:
+- Cities sorted by activity count (most active first)
+- Cities with 0 activities still shown (greyed out)
+- Warm background color (#fdf8f6)
+- Primary button is barn red (#d06b46)

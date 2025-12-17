@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Post an Activity - Barn Raise{% endblock %}
+
+{% block content %}
+<div class="mb-6">
+    <a href="{% url 'home' %}" class="text-barn-600 hover:text-barn-700 flex items-center gap-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back
+    </a>
+    <h1 class="text-2xl font-bold text-gray-800 mt-2">Post an Activity</h1>
+</div>
+
+<form method="post" class="space-y-6">
+    {% csrf_token %}
+
+    <div class="bg-white rounded-xl shadow-sm p-6 space-y-5">
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">{{ form.title.label }}</label>
+            {{ form.title }}
+            {% if form.title.errors %}
+            <p class="text-red-500 text-sm mt-1">{{ form.title.errors.0 }}</p>
+            {% endif %}
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">{{ form.description.label }}</label>
+            {{ form.description }}
+            {% if form.description.errors %}
+            <p class="text-red-500 text-sm mt-1">{{ form.description.errors.0 }}</p>
+            {% endif %}
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">{{ form.neighborhood.label }}</label>
+            {{ form.neighborhood }}
+            {% if form.neighborhood.errors %}
+            <p class="text-red-500 text-sm mt-1">{{ form.neighborhood.errors.0 }}</p>
+            {% endif %}
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">{{ form.location_hint.label }}</label>
+            {{ form.location_hint }}
+            {% if form.location_hint.errors %}
+            <p class="text-red-500 text-sm mt-1">{{ form.location_hint.errors.0 }}</p>
+            {% endif %}
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">{{ form.starts_at.label }}</label>
+                {{ form.starts_at }}
+                {% if form.starts_at.errors %}
+                <p class="text-red-500 text-sm mt-1">{{ form.starts_at.errors.0 }}</p>
+                {% endif %}
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">{{ form.duration_minutes.label }}</label>
+                {{ form.duration_minutes }}
+            </div>
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">{{ form.helpers_needed.label }}</label>
+            {{ form.helpers_needed }}
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">{{ form.host_email.label }}</label>
+            {{ form.host_email }}
+            {% if form.host_email.errors %}
+            <p class="text-red-500 text-sm mt-1">{{ form.host_email.errors.0 }}</p>
+            {% endif %}
+            <p class="text-xs text-gray-400 mt-1">We'll send you a link to manage your activity</p>
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">{{ form.host_phone.label }}</label>
+            {{ form.host_phone }}
+        </div>
+    </div>
+
+    <button type="submit"
+            class="w-full py-4 bg-barn-600 hover:bg-barn-700 text-white text-center font-semibold rounded-xl transition-colors">
+        Post Activity
+    </button>
+</form>
+{% endblock %}
