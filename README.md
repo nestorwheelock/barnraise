@@ -1,6 +1,21 @@
-# Barn Raise
+<p align="center">
+  <img src="static/img/icon.svg" alt="Barn Raise" width="180" height="180">
+</p>
 
-**Hyperlocal community connection without the overhead.**
+<h1 align="center">Barn Raise</h1>
+
+<p align="center">
+  <strong>Hyperlocal community connection without the overhead.</strong>
+</p>
+
+<p align="center">
+  <a href="#quick-start">Quick Start</a> •
+  <a href="#features">Features</a> •
+  <a href="#the-solution">How It Works</a> •
+  <a href="#production-deployment">Deploy</a>
+</p>
+
+---
 
 Social media promised to connect us but instead gave us feeds, algorithms, and endless scrolling. Barn Raise takes a different approach: show what's happening nearby right now, and make it dead simple to participate.
 
